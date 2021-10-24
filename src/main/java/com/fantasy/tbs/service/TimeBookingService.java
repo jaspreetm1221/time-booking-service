@@ -2,6 +2,8 @@ package com.fantasy.tbs.service;
 
 import com.fantasy.tbs.domain.TimeBookDTO;
 import com.fantasy.tbs.domain.TimeBooking;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,4 +55,8 @@ public interface TimeBookingService {
      * @param timeBookDTO
      */
     void bookTime(TimeBookDTO timeBookDTO);
+
+    long workingTime(String personalNumber);
+
+    boolean hasWorkedOnDay(String personalNumber, LocalDate date);
 }
